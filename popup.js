@@ -1,8 +1,10 @@
 document.addEventListener('DOMContentLoaded', function () {
   var query = {
-	  text: ''
+    text: ''
   };
   chrome.history.search(query, function (results) {
-	  console.table(results);
+    results.forEach(function (result) {
+      console.log(result);
+    });
   });
 });
