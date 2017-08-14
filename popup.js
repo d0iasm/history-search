@@ -1,10 +1,17 @@
 document.addEventListener('DOMContentLoaded', function () {
+  var ul = document.querySelector('#js-history-list');
+  var html = '';
   var query = {
     text: ''
   };
   chrome.history.search(query, function (results) {
     results.forEach(function (result) {
-      console.log(result);
+      html += '<li>' +
+        '<a href="' + result.url + '" target="_blank">' +
+        result.title +
+        '</a>' +
+        '</li>';
     });
+    ul.innerHTML = html;
   });
 });
