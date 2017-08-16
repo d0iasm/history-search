@@ -18,8 +18,8 @@ document.addEventListener('DOMContentLoaded', function () {
   });
 });
 
-function getQuery(){
-  var value = document.getElementById('text-input').value;
-  ul.innerHTML = '<li>'+ value +'</li>';
-}
+// function getQuery(){
+  // var value = document.getElementById('text-input').value;
+  // ul.innerHTML = '<li>'+ value +'</li>';
+// }
 
