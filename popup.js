@@ -5,6 +5,7 @@ document.addEventListener('DOMContentLoaded', function () {
     text: '',
     maxResults: 10
   };
+
   chrome.history.search(query, function (results) {
     results.forEach(function (result) {
       html += '<li class="history-list-item">' +
@@ -16,3 +17,9 @@ document.addEventListener('DOMContentLoaded', function () {
     ul.innerHTML = html;
   });
 });
+
+function getQuery(){
+  var value = document.getElementById('text-input').value;
+  ul.innerHTML = '<li>'+ value +'</li>';
+}
+
