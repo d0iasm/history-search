@@ -3,11 +3,11 @@ document.addEventListener('DOMContentLoaded', function () {
   var html = '';
   var query = {
     text: '',
-    maxResults: 15
+    maxResults: 10
   };
   chrome.history.search(query, function (results) {
     results.forEach(function (result) {
-      html += '<li>' +
+      html += '<li class="history-list-item">' +
         '<a href="' + result.url + '" target="_blank">' +
         result.title +
         '</a>' +
