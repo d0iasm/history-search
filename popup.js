@@ -1,9 +1,9 @@
 document.addEventListener('DOMContentLoaded', function () {
-  var ul = document.querySelector('#js-history-list');
+  var ul = document.querySelector('#history-list');
   var html = '';
   var query = {
     text: '',
-    maxResults: 20
+    maxResults: 15
   };
   chrome.history.search(query, function (results) {
     results.forEach(function (result) {
