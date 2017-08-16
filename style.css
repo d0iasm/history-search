@@ -5,6 +5,11 @@ html{
     word-spacing: 1px;
     letter-spacing: 1px;
 }
+ul{
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+}
 .wrap{
     display: inline-block;
     position: relative;
