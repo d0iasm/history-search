@@ -23,7 +23,7 @@ ul{
     padding: 0;
     height: 40px;
 }
-.text-input{
+#text-input{
     width: 280px;
     height: 40px;
     border: none;

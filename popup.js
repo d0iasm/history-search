@@ -2,15 +2,19 @@ setInterval(function(){
   console.log("hoge");
 }, 1000);
 
-// document.addEventListener('DOMContentLoaded', getResult(''), {once: true});
 chrome.browserAction.onClicked.addListener(getResult(''));
-document.getElementById('history-search').addEventListener('submit', getQuery);
+document.getElementById('submit').addEventListener('click', getQuery);
 
-function getQuery() {
+document.getElementById("text-input")
+  .addEventListener("keyup", function(event) {
+    event.preventDefault();
+    if (event.keyCode == 13) {
+      document.getElementById("submit").click();
+    }
+  });
+
+function getQuery(event) {
   let value = document.getElementById('text-input').value;
-  // let ul = document.querySelector('#history-list');
-  // ul.innerHTML = '<li>'+ value +'</li>';
-	// alert(value);
   getResult(value);
 }
 
