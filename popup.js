@@ -1,7 +1,3 @@
-setInterval(function(){
-  console.log("hoge");
-}, 1000);
-
 chrome.browserAction.onClicked.addListener(getResult(''));
 document.getElementById('submit').addEventListener('click', getQuery);
 
@@ -9,11 +5,11 @@ document.getElementById("text-input")
   .addEventListener("keyup", function(event) {
     event.preventDefault();
     if (event.keyCode == 13) {
-      document.getElementById("submit").click();
+      getQuery();
     }
   });
 
-function getQuery(event) {
+function getQuery() {
   let value = document.getElementById('text-input').value;
   getResult(value);
 }
