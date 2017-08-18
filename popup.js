@@ -1,4 +1,9 @@
-document.addEventListener('DOMContentLoaded', getResult(''), {once: true});
+setInterval(function(){
+  console.log("hoge");
+}, 1000);
+
+// document.addEventListener('DOMContentLoaded', getResult(''), {once: true});
+chrome.browserAction.onClicked.addListener(getResult(''));
 document.getElementById('history-search').addEventListener('submit', getQuery);
 
 function getQuery() {
@@ -14,7 +19,7 @@ function getResult(text) {
   let html = '';
   let query = {
     text: text,
-    maxResults: 10
+    maxResults: 13
   };
 
   chrome.history.search(query, function (results) {
