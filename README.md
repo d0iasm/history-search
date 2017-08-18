@@ -2,4 +2,5 @@
 Search browsing history
 
 ## How to Install
-go to [chrome webstore](https://chrome.google.com/webstore/detail/history-search/bbmclnpfclejopgaicmhgpocicpijodj)!
+1. go to [chrome webstore](https://chrome.google.com/webstore/detail/history-search/bbmclnpfclejopgaicmhgpocicpijodj)
+2. Press "Add to CHROME" button
