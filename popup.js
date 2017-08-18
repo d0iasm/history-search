@@ -1,3 +1,9 @@
+document.getElementById('history-search').addEventListener('submit', getQuery);
+function getQuery() {
+	alert("Click!");
+}
+
+
 document.addEventListener('DOMContentLoaded', function () {
   var ul = document.querySelector('#history-list');
   var html = '';
@@ -19,7 +25,7 @@ document.addEventListener('DOMContentLoaded', function () {
 });
 
 // function getQuery(){
-  // var value = document.getElementById('text-input').value;
-  // ul.innerHTML = '<li>'+ value +'</li>';
+// var value = document.getElementById('text-input').value;
+// ul.innerHTML = '<li>'+ value +'</li>';
 // }
 
