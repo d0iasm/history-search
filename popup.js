@@ -1,14 +1,19 @@
+document.addEventListener('DOMContentLoaded', getResult(''), {once: true});
 document.getElementById('history-search').addEventListener('submit', getQuery);
+
 function getQuery() {
-	alert("Click!");
+  let value = document.getElementById('text-input').value;
+  // let ul = document.querySelector('#history-list');
+  // ul.innerHTML = '<li>'+ value +'</li>';
+	// alert(value);
+  getResult(value);
 }
 
-
-document.addEventListener('DOMContentLoaded', function () {
-  var ul = document.querySelector('#history-list');
-  var html = '';
-  var query = {
-    text: '',
+function getResult(text) {
+  let ul = document.querySelector('#history-list');
+  let html = '';
+  let query = {
+    text: text,
     maxResults: 10
   };
 
@@ -22,10 +27,7 @@ document.addEventListener('DOMContentLoaded', function () {
     });
     ul.innerHTML = html;
   });
-});
+}
 
-// function getQuery(){
-// var value = document.getElementById('text-input').value;
-// ul.innerHTML = '<li>'+ value +'</li>';
-// }
+
 
