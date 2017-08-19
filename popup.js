@@ -1,22 +1,22 @@
-chrome.browserAction.onClicked.addListener(getResult(''));
+chrome.browserAction.onClicked.addListener(getResult());
 document.getElementById('submit').addEventListener('click', getQuery);
 
 document.getElementById("text-input")
   .addEventListener("keyup", function(event) {
     event.preventDefault();
     if (event.keyCode == 13) {
-      getQuery();
+      getResult();
     }
   });
 
 function getQuery() {
-  let value = document.getElementById('text-input').value;
-  getResult(value);
+  return document.getElementById('text-input').value;
 }
 
-function getResult(text) {
+function getResult() {
   let ul = document.querySelector('#history-list');
   let html = '';
+  let text = getQuery();
   let query = {
     text: text,
     maxResults: 13
