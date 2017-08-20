@@ -10,16 +10,17 @@ document.getElementById("text-input")
   });
 
 function getQuery() {
+  console.assert(document.getElementById('text-input') != null, 'input field is none.');
   return document.getElementById('text-input').value;
 }
 
 function getResult() {
-  let ul = document.querySelector('#history-list');
+  let ul = document.getElementById('history-list');
   let html = '';
   let text = getQuery();
   let query = {
     text: text,
-    maxResults: 13
+    maxResults: 15
   };
 
   chrome.history.search(query, function (results) {
@@ -33,6 +34,3 @@ function getResult() {
     ul.innerHTML = html;
   });
 }
-
-
-
