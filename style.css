@@ -34,14 +34,24 @@ ul{
     border: none;
     padding: 0 10px;
     font-size: 16px;
-    border-bottom: 1px solid #BBB;
+    border-bottom: 1px solid #ccc;
 }
 #text-input:focus{
     outline: 0;
-    border-bottom: 2px solid red;
 }
-#text-input:focus:hover{
-    border-bottom: 2px solid green;
+#text-input ~ .focus-border{
+    position: absolute;
+    bottom: -1px;
+    left: 50%;
+    width: 0;
+    height: 2px;
+    background-color: #ff2200;
+    transition: 0.4s;
+}
+#text-input:focus ~ .focus-border{
+    width: 100%;
+    transition: 0.4s;
+    left: 0;
 }
 .btn{
     width: 40px;
