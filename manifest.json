@@ -1,7 +1,7 @@
 {
   "manifest_version": 2,
   "name": "History Search",
-  "version": "0.0.1",
+  "version": "1.0.0",
   "description": "Search browsing history",
   "author": "d0iasm",
   "icons": {
