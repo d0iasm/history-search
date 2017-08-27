@@ -9,6 +9,16 @@ document.getElementById("text-input")
     }
   });
 
+document.addEventListener("keyup", function(event) {
+  if (event.keyCode == 37){
+    moveFocus(false);
+  }
+  if (event.keyCode == 39) {
+    moveFocus(true);
+  }
+});
+
+
 function getQuery() {
   console.assert(document.getElementById('text-input') != null, 'input field is none.');
   return document.getElementById('text-input').value;
@@ -33,4 +43,10 @@ function getResult() {
     });
     ul.innerHTML = html;
   });
+}
+
+function moveFocus(next) {
+  var lists = document.getElementsByClassName("history-list-item");
+  console.log(next);
+  console.log(lists);
 }
