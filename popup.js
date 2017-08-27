@@ -10,11 +10,12 @@ document.getElementById("text-input")
   });
 
 document.addEventListener("keyup", function(event) {
+  event.preventDefault();
   if (event.keyCode == 37){
-    moveFocus(false);
+    moveFocus();
   }
   if (event.keyCode == 39) {
-    moveFocus(true);
+    moveFocus();
   }
 });
 
@@ -45,8 +46,9 @@ function getResult() {
   });
 }
 
-function moveFocus(next) {
+function moveFocus() {
+  var index = 0;
   var lists = document.getElementsByClassName("history-list-item");
-  console.log(next);
-  console.log(lists);
+  lists[index].firstElementChild.focus();
+  console.log(lists[index].children);
 }
