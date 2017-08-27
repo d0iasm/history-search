@@ -51,8 +51,8 @@ function moveFocus(next) {
   let active = document.activeElement;
   if(active.tagName == "INPUT" || active == undefined) {
     lists[0].firstElementChild.focus();
-  }else{
-    active.parentNode.nextSibling.firstElementChild.focus();
+  } else {
+    next ? active.parentNode.nextSibling.firstElementChild.focus() : active.parentNode.previousSibling.firstElementChild.focus();
   }
 }
 
