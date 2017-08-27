@@ -12,10 +12,10 @@ document.getElementById("text-input")
 document.addEventListener("keyup", function(event) {
   event.preventDefault();
   if (event.keyCode == 37){
-    moveFocus();
+    moveFocus(false);
   }
   if (event.keyCode == 39) {
-    moveFocus();
+    moveFocus(true);
   }
 });
 
@@ -46,9 +46,13 @@ function getResult() {
   });
 }
 
-function moveFocus() {
-  var index = 0;
-  var lists = document.getElementsByClassName("history-list-item");
-  lists[index].firstElementChild.focus();
-  console.log(lists[index].children);
+function moveFocus(next) {
+  let lists = document.getElementsByClassName("history-list-item");
+  let active = document.activeElement;
+  if(active.tagName == "INPUT" || active == undefined) {
+    lists[0].firstElementChild.focus();
+  }else{
+    active.parentNode.nextSibling.firstElementChild.focus();
+  }
 }
+
