@@ -52,7 +52,8 @@ function moveFocus(next) {
   if(active.tagName == "INPUT" || active == undefined) {
     lists[0].firstElementChild.focus();
   } else {
-    next ? active.parentNode.nextSibling.firstElementChild.focus() : active.parentNode.previousSibling.firstElementChild.focus();
+    next ? active.parentNode.nextSibling.firstElementChild.focus() :
+      active.parentNode.previousSibling.firstElementChild.focus();
   }
 }
 

@@ -67,5 +67,17 @@ ul{
     top: 0px;
 }
 .history-list-item{
-    margin: 10px 0;
+    width: 100%;
+}
+.history-list-item a{
+    color: #333;
+    text-decoration: none;
+    display: inline-block;
+    width: calc(100% - 10px);
+    padding: 5px;
+}
+.history-list-item a:focus{
+    background-color: #999;
+    color: white;
+    outline: 0;
 }
