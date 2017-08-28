@@ -1,23 +1,21 @@
 {
-  "name": "history-search",
-  "version": "1.0.0",
-  "description": "Search browsing history.",
-  "main": "popup.js",
-  "dependencies": {
-    "jasmine": "^2.8.0"
-  },
-  "devDependencies": {},
-  "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
-  },
-  "repository": {
-    "type": "git",
-    "url": "git+https://github.com/d0iasm/history-search.git"
-  },
-  "author": "",
-  "license": "ISC",
-  "bugs": {
-    "url": "https://github.com/d0iasm/history-search/issues"
-  },
-  "homepage": "https://github.com/d0iasm/history-search#readme"
+    "name": "history-search",
+    "version": "1.0.0",
+    "description": "Search browsing history.",
+    "main": "popup.js",
+    "dependencies": {
+	"jasmine": "^2.8.0"
+    },
+    "devDependencies": {},
+    "scripts": { "test": "jasmine" },
+    "repository": {
+	"type": "git",
+	"url": "git+https://github.com/d0iasm/history-search.git"
+    },
+    "author": "",
+    "license": "ISC",
+    "bugs": {
+	"url": "https://github.com/d0iasm/history-search/issues"
+    },
+    "homepage": "https://github.com/d0iasm/history-search#readme"
 }
